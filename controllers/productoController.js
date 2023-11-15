@@ -32,7 +32,7 @@ exports.actualizarProducto = async (req, res) => {
 
     try {
 
-        const {_id, producto, categoria, descripcion, precio } = new Producto(req.body);
+        const {_id, producto, categoria, descripcion, precio, imagen } = new Producto(req.body);
         let products = await Producto.findById(req.params.id);
 
         if(!products){
@@ -44,6 +44,7 @@ exports.actualizarProducto = async (req, res) => {
         products.categoria = categoria;
         products.descripcion= descripcion;
         products.precio = precio;
+        products.imagen = imagen;
 
         console.log(products)
 

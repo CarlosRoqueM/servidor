@@ -18,6 +18,10 @@ const ProductoSchema = mongoose.Schema({
         type: Number,
         require: true
     },
+    imagen: {
+        type: String,
+        require: false
+    },
     fechaCreacion: {
         type: Date,
         default: Date.now()
